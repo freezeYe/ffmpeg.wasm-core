@@ -9,7 +9,7 @@ FLAGS=(
   --enable-nonfree        # required by fdk-aac
   --enable-zlib           # enable zlib
   --enable-libx264        # enable x264
-  # --enable-libx265        # enable x265
+  --enable-libx265        # enable x265
   --enable-libvpx         # enable libvpx / webm
   --enable-libwavpack     # enable libwavpack
   --enable-libmp3lame     # enable libmp3lame
@@ -18,19 +18,19 @@ FLAGS=(
   --enable-libvorbis      # enable libvorbis
   --enable-libfreetype    # enable freetype
   --enable-libopus        # enable opus
-  # --enable-libwebp        # enable libwebp
+  --enable-libwebp        # enable libwebp
   --enable-libass         # enable libass
   --enable-libfribidi     # enable libfribidi
   # --enable-libaom         # enable libaom
 
-  --enable-ffmpeg
-  --disable-ffplay
-  --disable-ffprobe
+  # --enable-ffmpeg
+  # --disable-ffplay
+  # --disable-ffprobe
 
-  --disable-swresample
-  --disable-avfilter
-  --disable-asm
-  --disable-protocols
+  # --disable-swresample
+  # --disable-avfilter
+  # --disable-asm
+  # --disable-protocols
 )
 echo "FFMPEG_CONFIG_FLAGS=${FLAGS[@]}"
 emconfigure ./configure "${FLAGS[@]}"

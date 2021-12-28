@@ -1,6 +1,6 @@
 const FileType = require('file-type');
 const { CASES } = require('./config');
-let mode = 'mt';
+let mode = 'st';
 if (process.argv.length > 2) {
   mode = process.argv[2];
 }

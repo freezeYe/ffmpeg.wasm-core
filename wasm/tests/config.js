@@ -69,16 +69,16 @@ const CASES = [
   //     { name: 'video.gif', type: 'image/gif' },
   //   ]
   // },
-  // {
-  //   name: 'wav to mp3',
-  //   args: ['-i', 'audio.wav', 'audio.mp3'],
-  //   input: [
-  //     { name: 'audio.wav', data: wav },
-  //   ],
-  //   output: [
-  //     { name: 'audio.mp3', type: 'audio/mpeg' },
-  //   ]
-  // },
+  {
+    name: 'wav to mp3',
+    args: ['-i', 'audio.wav', 'audio.mp3'],
+    input: [
+      { name: 'audio.wav', data: wav },
+    ],
+    output: [
+      { name: 'audio.mp3', type: 'audio/mpeg' },
+    ]
+  },
   // {
   //   name: 'avi to x264 mp4 with srt',
   //   args: ['-i', 'video.avi', '-vf', 'subtitles=test.srt:fontsdir=/fonts:force_style="Fontname=Arial"', 'video.mp4'],
@@ -229,17 +229,17 @@ const CASES = [
   //   ],
   //   st: false,
   // },
-  {
-    name: 'capture frames',
-    args: ['-i', 'video.avi', '-ss', '00:00:01', '-vframes', 1, '0.png'],
-    input: [
-      { name: 'video.avi', data: avi },
-    ],
-    output: [
-      { name: '0.png', type: 'image/png' },
-    ],
-    st: false,
-  },
+  // {
+  //   name: 'capture frames',
+  //   args: ['-i', 'video.avi', '-ss', '00:00:01', '-vframes', 1, '0.png'],
+  //   input: [
+  //     { name: 'video.avi', data: avi },
+  //   ],
+  //   output: [
+  //     { name: '0.png', type: 'image/png' },
+  //   ],
+  //   st: false,
+  // },
 ];
 
 module.exports = {
