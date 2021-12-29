@@ -59,7 +59,7 @@ FFMPEG_CONFIG_FLAGS_BASE=(
   --disable-stripping     # disable stripping
   --disable-programs      # disable programs build (incl. ffplay, ffprobe & ffmpeg)
   --disable-doc           # disable doc
-  --disable-debug         # disable debug info, required by closure
+  # --disable-debug         # disable debug info, required by closure
   --disable-runtime-cpudetect   # disable runtime cpu detect
   --disable-autodetect    # disable external libraries auto detect
   --extra-cflags="$CFLAGS"
