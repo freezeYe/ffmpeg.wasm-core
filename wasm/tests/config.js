@@ -27,6 +27,8 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 Dialogue: 0,0:00:00.00,0:00:01.00,Default,,0,0,0,,ffmpeg.wasm test
 `;
 
+console.log(wav, 'wav')
+
 const CASES = [
   // {
   //   name: 'wav to aac',
