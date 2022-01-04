@@ -27,7 +27,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 Dialogue: 0,0:00:00.00,0:00:01.00,Default,,0,0,0,,ffmpeg.wasm test
 `;
 
-console.log(wav, 'wav')
+console.log(avi, 'avi')
 
 const CASES = [
   // {
@@ -72,15 +72,25 @@ const CASES = [
   //   ]
   // },
   {
-    name: 'wav to mp3',
-    args: ['-i', 'audio.wav', 'audio.mp3'],
+    name: 'avi to mp4',
+    args: ['-i', 'video.avi', 'video.mp4'],
     input: [
-      { name: 'audio.wav', data: wav },
+      { name: 'video.avi', data: avi },
     ],
     output: [
-      { name: 'audio.mp3', type: 'audio/mpeg' },
+      { name: 'video.mp4', type: 'video/mp4' },
     ]
   },
+  // {
+  //   name: 'wav to mp3',
+  //   args: ['-i', 'audio.wav', 'audio.mp3'],
+  //   input: [
+  //     { name: 'audio.wav', data: wav },
+  //   ],
+  //   output: [
+  //     { name: 'audio.mp3', type: 'audio/mpeg' },
+  //   ]
+  // },
   // {
   //   name: 'avi to x264 mp4 with srt',
   //   args: ['-i', 'video.avi', '-vf', 'subtitles=test.srt:fontsdir=/fonts:force_style="Fontname=Arial"', 'video.mp4'],
