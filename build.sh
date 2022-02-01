@@ -34,6 +34,7 @@ run-all() {
     build-libass
     #build-aom # disabled as it is extremely slow
     configure-ffmpeg
+    #configure-ffmpeg.mp4-scale
     build-ffmpeg
   )
   run ${SCRIPTS[@]}

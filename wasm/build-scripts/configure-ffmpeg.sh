@@ -23,9 +23,9 @@ FLAGS=(
   --enable-libfribidi     # enable libfribidi
   # --enable-libaom         # enable libaom
 
-  # --enable-ffmpeg
-  # --disable-ffplay
-  # --disable-ffprobe
+  --enable-ffmpeg
+  --disable-ffplay
+  --disable-ffprobe
 
   # --disable-swresample
   # --disable-avfilter

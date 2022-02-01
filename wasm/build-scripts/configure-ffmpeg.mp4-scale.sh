@@ -20,7 +20,6 @@ FLAGS=(
   --enable-demuxer=mov
   --enable-muxer=rawvideo,mp4
   --enable-filter=scale,format
-
 )
 echo "FFMPEG_CONFIG_FLAGS=${FLAGS[@]}"
 emconfigure ./configure "${FLAGS[@]}"

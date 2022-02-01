@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const base = path.join(__dirname, 'data');
-const avi = Uint8Array.from(fs.readFileSync(path.join(base, 'video-1s.avi')));
+const avi = Uint8Array.from(fs.readFileSync(path.join(base, 'video-3s.avi')));
 const wav = Uint8Array.from(fs.readFileSync(path.join(base, 'audio-1s.wav')));
 const arial = Uint8Array.from(fs.readFileSync(path.join(base, 'arial.ttf')));
 const png = Uint8Array.from(fs.readFileSync(path.join(base, 'image.png')));
@@ -71,16 +71,16 @@ const CASES = [
   //     { name: 'video.gif', type: 'image/gif' },
   //   ]
   // },
-  {
-    name: 'avi to mp4',
-    args: ['-i', 'video.avi', 'video.mp4'],
-    input: [
-      { name: 'video.avi', data: avi },
-    ],
-    output: [
-      { name: 'video.mp4', type: 'video/mp4' },
-    ]
-  },
+  // {
+  //   name: 'avi to mp4',
+  //   args: ['-i', 'video.avi', 'video.mp4'],
+  //   input: [
+  //     { name: 'video.avi', data: avi },
+  //   ],
+  //   output: [
+  //     { name: 'video.mp4', type: 'video/mp4' },
+  //   ]
+  // },
   // {
   //   name: 'wav to mp3',
   //   args: ['-i', 'audio.wav', 'audio.mp3'],
@@ -240,18 +240,18 @@ const CASES = [
   //     { name: 'video.mp4', type: 'video/mp4' },
   //   ],
   //   st: false,
-  // },
-  // {
-  //   name: 'capture frames',
-  //   args: ['-i', 'video.avi', '-ss', '00:00:01', '-vframes', 1, '0.png'],
-  //   input: [
-  //     { name: 'video.avi', data: avi },
-  //   ],
-  //   output: [
-  //     { name: '0.png', type: 'image/png' },
-  //   ],
-  //   st: false,
-  // },
+  // // },
+  {
+    name: 'capture frames',
+    args: ['-i', 'video.avi', '-ss', '00:00:01','-r', '1', '-y', '-f', 'image2', '-frames', '1', 'frames/f_%03d.jpg'],
+    dirs: ["frames"],
+    input: [
+      { name: 'video.avi', data: avi },
+    ],
+    output: [
+      { name: 'frames/f_001.jpg', type: 'image/jpeg' },
+    ],
+  },
 ];
 
 module.exports = {
